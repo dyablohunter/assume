@@ -2,7 +2,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>assume</title>
+	<title>assume.js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,30 +16,101 @@
 </head>
 <body>
 
-<div id="container">
-	<b>assume</b> is a simple algorithm that uncomplicates the process of calculating the correct number of shares when co-founding a start-up.
-	<p>When you want to start a project with a team and it's time to fund a company, it's wise to be realistic and try to objectively identify how much value and responsibility each member can start with. I regard the following factors as the most important to take into the estimation (this algorithm will be improved over time):</p>
-	<div id="step1">
-		<div class="entity" id="1">
-			<label for="name">Name</label>
-			<input id="name" type="text">
-			<label for="age">Age - the age factor is important because logically a younger entity has fewer skills and less life experience in general. Thus, depending on the project orientation, the weight must lean towards younger is better or towards older is better.</label>
-			<input id="age" type="text"> <input class="radio" type="radio">
+	<header>
+		<h1><a href="/" id="logo">assume.js</a> <span>is a simple jQuery algorithm that uncomplicates the process of calculating the correct number of shares when co-founding a start-up.</span></h1>
+	</header>
+	<div id="container">
+		<p>When you want to start a project with a team and it's time to start a company, it's wise to be realistic and try to objectively identify how much value and responsibility each member can start with.</p>
+		<p>I regard the following factors as the most important to take into the estimation (this algorithm will be improved over time):</p>
+		<label for="total-shares">Number of total shares:</label>
+		<input id="total-shares" name="total-shares" type="number" value="100" min="1" max="999999999999999999">
+
+		<p>What type of entity naturally brings more weight/value in this project?</p>
+
+		<input id="equal-age" type="checkbox" name="age-weight" value="equal-age">
+		<label for="equal">Age not relevant</label>
+
+		<input id="younger" type="checkbox" name="age-weight" value="younger">
+		<label for="younger">Younger</label>
+
+		<input id="older" type="checkbox" name="age-weight" value="older">
+		<label for="older">Older</label>
+
+		<input id="more-income" type="checkbox" name="more-income" value="more-income">
+		<label for="more-income">More Income</label>
+
+		<input id="more-availability" type="checkbox" name="more-availability" value="more-availability">
+		<label for="more-availability">More availability</label>
+
+		<input id="passion" type="checkbox" name="passion" value="passion">
+		<label for="passion">Passion (how passionate you will be about the project, will it make you happy long term?)</label>
 
 
-1
+		<div id="step1">
+			<div class="entity" id="1">
+				<label for="name">Name</label>
+				<input id="name" name="name" type="text">
+
+				<label for="age">Age</label>
+				<input id="age" type="range" min="1" max="100" value="20" class="slider">
 
 
+				<label for="annual-income">Annual income &euro;</label>
+				<input id="annual-income" type="text" min="1" max="1000000000" value="12000">
+
+				<label for="relevant-skills">Relevant skills (Select relevant start-up essential skills and evaluate each skill from 1 to 10, 1 meaning just starting to learn and 10 meaning it's your specialty and you have lots of experience with it, making you one of the experts on it)</label>
+				<input id="english" name="english" type="checkbox">
+				<input id="other-important-second-language" name="other-important-second-language" type="checkbox">
+				<input id="designer" name="designer" type="checkbox">
+				<input id="front-end" name="front-end" type="checkbox">
+				<input id="back-end" name="back-end" type="checkbox">
+				<input id="legal-expert" name="legal-expert" type="checkbox">
+				<input id="social-media" name="social-media" type="checkbox">
+				<input id="marketing" name="marketing" type="checkbox">
+				<input id="paperwork" name="paperwork" type="checkbox">
+				<input id="project-manager" name="project-manager" type="checkbox">
+				<input id="people-manager" name="people-manager" type="checkbox">
+				<input id="business-manager" name="business-manager" type="checkbox">
+				<input id="people-skills" name="people-skills" type="checkbox">
+				<input id="administrator" name="administrator" type="checkbox">
+				<input id="visionary" name="visionary" type="checkbox">
+				<input id="executing" name="executing" type="checkbox">
+				<input id="organising" name="organising" type="checkbox">
+				<input id="problem-solving" name="problem-solving" type="checkbox">
+				<input id="executer" name="executer" type="checkbox">
+				<input id="communicator" name="communicator" type="checkbox">
+				<input id="presenter" name="presenter" type="checkbox">
+				<input id="hr" name="hr" type="checkbox">
+				<input id="optimiser" name="optimiser" type="checkbox">
+				<input id="innovator" name="innovator" type="checkbox">
+				<input id="blockchain-tech" name="blockchain-tech" type="checkbox">
+				<input id="blockchain-business" name="blockchain-business" type="checkbox">
+				<input id="know-how" name="know-how" type="checkbox">
 
 
-			<label for="age">Age</label>
-			<input id="age" type="text">
+				<label for="assets">Assets</label>
+				<input id="assets" type="text">
+
+				<label for="availability">Availability</label>
+				<input id="availability" type="text">
+
+				<label for="efficience">Efficience</label>
+				<input id="efficience" type="text">
+
+				<p>Administrator?</p>
+				<input id="admin" type="radio" name="administrator" value="0">
+				<label for="admin">Yes</label>
+				<input id="not-admin" type="radio" name="administrator" value="1">
+				<label for="not-admin">No</label>
+
+				<p>Manifester?</p>
+				<input id="manifester" type="radio" name="manifester" value="0">
+				<label for="manifester">Yes</label>
+				<input id="not-manifester" type="radio" name="manifester" value="1">
+				<label for="not-manifester">No</label>
+			</div>
 		</div>
 	</div>
-
-<footer>&copy; Copyright assume.com - Get it right the first time.</footer>
-
-</div>
-
+	<footer><a href="https://github.com/dyablohunter/assume">assume.js - MIT License</a></footer>
 </body>
 </html>
