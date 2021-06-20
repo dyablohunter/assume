@@ -25,7 +25,7 @@
 		<label for="total-shares">Number of total shares:</label>
 		<input id="total-shares" name="total-shares" type="number" value="100" min="1" max="999999999999999999">
 
-		<p>What type of entity naturally brings more weight/value in this project?</p>
+		<p>What type of quality naturally brings more weight/value in this project?</p>
 
 		<input id="equal-age" type="checkbox" name="age-weight" value="equal-age">
 		<label for="equal">Age not relevant</label>
@@ -42,6 +42,9 @@
 		<input id="more-availability" type="checkbox" name="more-availability" value="more-availability">
 		<label for="more-availability">More availability</label>
 
+		<input id="more-dependability" type="checkbox" name="more-dependability" value="more-dependability">
+		<label for="more-dependability">Dependability</label>
+
 		<input id="passion" type="checkbox" name="passion" value="passion">
 		<label for="passion">Passion (how passionate you will be about the project, will it make you happy long term?)</label>
 
@@ -54,48 +57,50 @@
 				<label for="age">Age</label>
 				<input id="age" type="range" min="1" max="100" value="20" class="slider">
 
+				<p>Relevant skills?</p>
+				<input id="more-skills" type="radio" name="relevant-skills" value="0">
+				<label for="more-skills">More</label>
+				<input id="less-skills" type="radio" name="relevant-skills" value="1">
+				<label for="less-skills">Less</label>
 
 				<label for="annual-income">Annual income &euro;</label>
 				<input id="annual-income" type="text" min="1" max="1000000000" value="12000">
 
-				<label for="relevant-skills">Relevant skills (Select relevant start-up essential skills and evaluate each skill from 1 to 10, 1 meaning just starting to learn and 10 meaning it's your specialty and you have lots of experience with it, making you one of the experts on it)</label>
-				<input id="english" name="english" type="checkbox">
-				<input id="other-important-second-language" name="other-important-second-language" type="checkbox">
-				<input id="designer" name="designer" type="checkbox">
-				<input id="front-end" name="front-end" type="checkbox">
-				<input id="back-end" name="back-end" type="checkbox">
-				<input id="legal-expert" name="legal-expert" type="checkbox">
-				<input id="social-media" name="social-media" type="checkbox">
-				<input id="marketing" name="marketing" type="checkbox">
-				<input id="paperwork" name="paperwork" type="checkbox">
-				<input id="project-manager" name="project-manager" type="checkbox">
-				<input id="people-manager" name="people-manager" type="checkbox">
-				<input id="business-manager" name="business-manager" type="checkbox">
-				<input id="people-skills" name="people-skills" type="checkbox">
-				<input id="administrator" name="administrator" type="checkbox">
-				<input id="visionary" name="visionary" type="checkbox">
-				<input id="executing" name="executing" type="checkbox">
-				<input id="organising" name="organising" type="checkbox">
-				<input id="problem-solving" name="problem-solving" type="checkbox">
-				<input id="executer" name="executer" type="checkbox">
-				<input id="communicator" name="communicator" type="checkbox">
-				<input id="presenter" name="presenter" type="checkbox">
-				<input id="hr" name="hr" type="checkbox">
-				<input id="optimiser" name="optimiser" type="checkbox">
-				<input id="innovator" name="innovator" type="checkbox">
-				<input id="blockchain-tech" name="blockchain-tech" type="checkbox">
-				<input id="blockchain-business" name="blockchain-business" type="checkbox">
-				<input id="know-how" name="know-how" type="checkbox">
 
+				<label for="owned-assets">Owned Assets &euro;</label>
+				<input id="owned-assets" type="text" min="1" max="1000000000" value="1000">
 
-				<label for="assets">Assets</label>
-				<input id="assets" type="text">
+				<label for="owned-assets">Monthly Costs Participator?</label>
+				<input id="monthly-bills-yes" type="radio" name="monthly-bills" value="0">
+				<label for="monthly-bills-yes">Yes</label>
+				<input id="monthly-bills-no" type="radio" name="monthly-bills" value="1">
+				<label for="monthly-bills-no">No</label>
 
-				<label for="availability">Availability</label>
-				<input id="availability" type="text">
+				<label for="team-assets">Team / Assets investor?</label>
+				<input id="team-assets-yes" type="radio" name="team-assets" value="0">
+				<label for="team-assets-yes">Yes</label>
+				<input id="team-assets-no" type="radio" name="team-assets" value="1">
+				<label for="team-assets-no">No</label>
 
-				<label for="efficience">Efficience</label>
-				<input id="efficience" type="text">
+				<label for="availability-daily">Availability (daily average hours)</label>
+				<input id="availability-daily" type="range" min="1" max="12" value="1" class="slider">
+				<label for="availability-monthly">Availability (monthly average days)</label>
+				<input id="availability-monthly" type="range" min="1" max="30" value="30" class="slider">
+
+				<label for="dependability">Dependability</label>
+				<input id="dependability" type="text">
+
+				<label for="efficiency">Efficiency</label>
+				<input id="efficiency" type="text">
+
+				<label for="network-value">People Network Value (Millions €) Min 0.01 - 1000 Max</label>
+				<input id="network-value" type="text" min="0.01" max="1000" value="0.1">
+
+				<p>CEO?</p>
+				<input id="ceo" type="radio" name="ceo" value="0">
+				<label for="ceo">Yes</label>
+				<input id="not-ceo" type="radio" name="ceo" value="1">
+				<label for="not-ceo">No</label>
 
 				<p>Administrator?</p>
 				<input id="admin" type="radio" name="administrator" value="0">
